@@ -6,3 +6,16 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+$fa-font-path: "http://127.0.0.1/task_mis/node_modules/@fortawesome/fontawesome-free/webfonts/";
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+@import "herlpers.scss";
+@import "admin.scss";
+@import "user.scss";
+
+
+
