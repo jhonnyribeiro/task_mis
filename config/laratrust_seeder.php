@@ -12,21 +12,21 @@ return [
     'truncate_tables' => true,
 
     'roles_structure' => [
-        'superadministrator' => [
+        'administrator' => [
             'users' => 'c,r,u,d',
             'payments' => 'c,r,u,d',
             'profile' => 'r,u'
         ],
-        'administrator' => [
+        'director' => [
             'users' => 'c,r,u,d',
             'profile' => 'r,u'
         ],
-        'user' => [
+        'manager' => [
             'profile' => 'r,u',
         ],
-        'role_name' => [
-            'module_1_name' => 'c,r,u,d',
-        ]
+        'employee' => [
+            'profile' => 'r,u',
+        ],
     ],
 
     'permissions_map' => [
