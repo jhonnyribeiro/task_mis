@@ -9,8 +9,9 @@
     <hr class="mt-4">
     <div class="card">
         <div class="card-body">
-            <div class="form" method="POST">
+            <form action="{{ route('admin.user.store') }}" method="POST">
                 @csrf
+                @method('POST')
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -53,7 +54,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                <button type="submit" class="btn btn-success">Salvar</button>
+            </form>
         </div>
     </div>
 @endsection

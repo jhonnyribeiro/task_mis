@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Role;
 use App\Models\User;
+use Illuminate\Http\Request;
+
 
 class AdminController extends Controller
 {
@@ -31,5 +33,29 @@ class AdminController extends Controller
         $roles = Role::all();
 
         return view('admin.manage.user.create', compact('roles'));
+    }
+
+    public function userStore(Request $request)
+    {
+
+        $data = $this->validate($request, [
+            'name' => 'required|max:255|string',
+            'email' => 'required|max:255|email|unique:users',
+        ]);
+
+        if (!empty($request->password)) {
+            $password = trim($request->password);
+        } else {
+            $password = 'password';
+        }
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => \Hash::make($password)
+        ]);
+
+        $user->syncRoles(explode(',', $request->roles));
+        return redirect()->route('admin.user.index');
     }
 }
