@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+
 class AdminController extends Controller
 {
     public function __construct()
@@ -13,5 +15,13 @@ class AdminController extends Controller
     public function dashboard()
     {
         return view('admin/dashboard');
+    }
+
+    public function managerUsers()
+    {
+        $users = User::orderBy("id", 'desc')->paginate(3);
+        $count = 1;
+
+        return view('admin.manage.user.index', compact('users', 'count'));
     }
 }

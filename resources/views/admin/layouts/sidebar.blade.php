@@ -9,7 +9,7 @@
             <a class="active" href="{{ route('admin.dashboard') }}">Dashboard</a>
         </li>
         <li>
-            <a href="#">Manage Users</a>
+            <a href="{{ route('admin.user.manager') }}">Gestão de Usuários</a>
         </li>
         <li>
             <a href="#">Manage Permissions</a>
