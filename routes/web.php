@@ -31,5 +31,6 @@ Route::group(['prefix' => 'user/', 'middleware' => ['role:director|manager|emplo
 
 Route::group(['prefix' => 'admin/'], function () {
     Route::get('dashboard', ['App\Http\Controllers\AdminController', 'dashboard'])->name('admin.dashboard');
-    Route::get('manage/users', ['App\Http\Controllers\AdminController', 'managerUsers'])->name('admin.user.manager');
+    Route::get('manage/users', ['App\Http\Controllers\AdminController', 'userIndex'])->name('admin.user.index');
+    Route::get('manage/users/create', ['App\Http\Controllers\AdminController', 'userCreate'])->name('admin.user.create');
 });

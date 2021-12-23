@@ -15,6 +15,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    @yield('styles')
 </head>
 <body>
 <div id="app">
@@ -91,7 +93,7 @@
             </nav>
 
             <main class="py-4">
-                <div class="container">
+                <div class="container" id="app">
                     @yield('content')
                 </div>
             </main>
@@ -99,7 +101,8 @@
     </div>
 </div>
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ asset('js/app.js') }}"></script>
+@yield('scripts')
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </body>
 </html>

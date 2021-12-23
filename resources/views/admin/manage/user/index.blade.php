@@ -6,7 +6,7 @@
         <h3>Gestão de Usuários</h3>
     </div>
     <div class="col-md-6 text-right">
-        <a href="" class="btn btn-primary"><i class="fas fa-user-plus"></i> Novo</a>
+        <a href="{{ route('admin.user.create') }}" class="btn btn-primary"><i class="fas fa-user-plus"></i> Novo</a>
     </div>
 </div>
 <hr class="mt-4">
