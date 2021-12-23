@@ -9,9 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -78,14 +75,6 @@
         </div>
     </nav>
 
-    <nav class="nav navbar-expand-lg nav-link bg-light">
-        <div class="container">
-            <a type="button" id="sidebarCollapse">
-                <i class="fas fa-align-left"></i>
-            </a>
-        </div>
-    </nav>
-
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -140,7 +129,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <a type="button" id="sidebarCollapse">
+                        <a type="button" id="sidebarCollapse">
                         <i class="fas fa-align-left"></i>
                     </a>
 
@@ -155,5 +144,8 @@
         </div>
     </div>
 </div>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </body>
 </html>
