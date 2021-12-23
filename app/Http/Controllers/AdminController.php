@@ -8,8 +8,8 @@ class AdminController extends Controller
 {
     public function __construct()
     {
-//        $this->middleware('auth');
-//        $this->middleware('role:administrator');
+        $this->middleware('auth');
+        $this->middleware('role:administrator');
     }
 
     public function dashboard()
@@ -19,7 +19,7 @@ class AdminController extends Controller
 
     public function managerUsers()
     {
-        $users = User::orderBy("id", 'desc')->paginate(3);
+        $users = User::orderBy("id", 'desc')->paginate(10);
         $count = 1;
 
         return view('admin.manage.user.index', compact('users', 'count'));
