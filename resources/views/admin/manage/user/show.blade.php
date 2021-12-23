@@ -3,10 +3,10 @@
 @section('content')
     <div class="d-flex justify-content-between">
         <div class="col-md-6">
-            <h3>Detalhes de usuário</h3>
+            <h3>Detalhes usuário</h3>
         </div>
         <div class="col-md-6">
-            <a href="" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
+            <a href="{{ route('admin.user.edit', $user->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
         </div>
     </div>
     <hr class="mt-4">

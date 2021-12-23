@@ -34,5 +34,6 @@ Route::group(['prefix' => 'admin/'], function () {
     Route::get('manage/users', ['App\Http\Controllers\AdminController', 'userIndex'])->name('admin.user.index');
     Route::get('manage/users/create', ['App\Http\Controllers\AdminController', 'userCreate'])->name('admin.user.create');
     Route::post('manage/users', ['App\Http\Controllers\AdminController', 'userStore'])->name('admin.user.store');
-    Route::get('manage/users/{id}', ['App\Http\Controllers\AdminController', 'userShow'])->name('admin.user.show');
+    Route::get('manage/users/show/{id}', ['App\Http\Controllers\AdminController', 'userShow'])->name('admin.user.show');
+    Route::get('manage/users/edit/{id}', ['App\Http\Controllers\AdminController', 'userEdit'])->name('admin.user.edit');
 });

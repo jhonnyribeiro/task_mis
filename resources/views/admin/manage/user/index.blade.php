@@ -31,7 +31,7 @@
                      <td>{{ $user->created_at }}</td>
                      <td>
                          <a href="{{ route('admin.user.show', $user->id) }}" class="btn btn-sm btn-secondary"><i class="fa fa-info"></i></a>
-                         <a href="" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
+                         <a href="{{ route('admin.user.edit', $user->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
                          <a href="" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                      </td>
                  </tr>
