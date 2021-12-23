@@ -7,7 +7,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-$fa-font-path: "http://127.0.0.1/task_mis/node_modules/@fortawesome/fontawesome-free/webfonts/";
+$fa-font-path: "../webfonts";
 
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
@@ -17,5 +17,15 @@ $fa-font-path: "http://127.0.0.1/task_mis/node_modules/@fortawesome/fontawesome-
 @import "admin.scss";
 @import "user.scss";
 
+// resources/sass/app.scss
 
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
 
