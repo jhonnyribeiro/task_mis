@@ -9,9 +9,9 @@
     <hr class="mt-4">
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('admin.user.store') }}" method="POST">
+            <form action="{{ route('admin.user.update', $user->id) }}" method="POST">
                 @csrf
-                @method('POST')
+                @method('PUT')
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">

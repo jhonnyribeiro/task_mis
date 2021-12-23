@@ -73,4 +73,34 @@ class AdminController extends Controller
 
         return view('admin.manage.user.edit', compact('user', 'roles'));
     }
+
+    public function userUpdate(Request $request, $id)
+    {
+        $this->validate($request, [
+            'name' => 'required|max:255|string',
+            'email' => "required|max:255|email|unique:users,id,{$id}",
+        ]);
+
+
+        $user = User::findOrFail($id);
+
+        if ($request->password_options == 'manual') {
+            $user->password = \Hash::make(trim($request->password));
+        }
+        if ($request->password_options == 'auto') {
+            $password = 'password';
+            $user->password = \Hash::make($password);
+        }
+
+
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $user->password
+        ]);
+
+        $user->syncRoles(explode(',', $request->roles));
+        return redirect()->route('admin.user.index');
+    }
 }
+
