@@ -58,4 +58,11 @@ class AdminController extends Controller
         $user->syncRoles(explode(',', $request->roles));
         return redirect()->route('admin.user.index');
     }
+
+    public function userShow($id)
+    {
+        $user = User::findOrFail($id);
+
+        return view('admin.manage.user.show', compact('user'));
+    }
 }
